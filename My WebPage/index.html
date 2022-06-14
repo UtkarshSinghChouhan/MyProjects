@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Resume</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://kit.fontawesome.com/1b1a727051.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* Style the header */
+        .header {
+            padding: 80px;
+            text-align: center;
+            color: white;
+            background-color: gray;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: auto;
+            font-family: monospace;
+
+            transition-duration: 0.4s;
+
+            animation: background-fade 7s infinite;
+        }
+
+        /* For header and Footer background transitions. */
+        @keyframes background-fade {
+            0% {
+                background-color: rgb(141, 140, 140);
+            }
+
+            25% {
+                background-color: rgb(92, 92, 92);
+            }
+
+            50% {
+                background-color: #333;
+            }
+
+            75% {
+                background-color: rgb(92, 92, 92);
+            }
+
+            100% {
+                background-color: rgb(141, 140, 140);
+            }
+        }
+
+        /* For the Hover effect on the header text. */
+        .header:hover {
+            text-shadow: 0 8px 0 rgb(168, 166, 166), 0 5px 0 rgb(139, 139, 139);
+        }
+
+        /* Increase the font size of the h1 element */
+        .header h1 {
+            font-size: 40px;
+        }
+
+        /* Style the top navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the navigation bar links */
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-family: monospace;
+            font-size: x-large;
+        }
+
+        /* Right-aligned link */
+        .navbar a.right {
+            float: right;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Column container */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            flex: 5%;
+            background-color: rgb(88, 88, 88);
+            padding: 20px;
+            color: rgb(37, 37, 37);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        /* Main column */
+        .main {
+            flex: 70%;
+            background-color: black;
+            padding: 20px;
+            color: white;
+        }
+
+        /* For the buttons.*/
+        .button {
+            border-radius: 8px;
+            border: none;
+            background-color: rgb(56, 56, 56);
+            display: inline-block;
+            font-size: medium;
+            transition-duration: 0.4s;
+            padding: 30px 40px;
+            margin: 10px;
+
+            text-align: center;
+            color: white;
+            font-size: medium;
+            transition: 0.4s;
+            font-family: Arial, Helvetica, sans-serif;
+            
+            cursor: pointer;
+        }
+
+        .button:hover {
+            box-shadow: 0 8px 10px 0 rgb(134, 133, 133), 0 7px 7px 0 silver;
+
+            text-shadow: 0 5px 0 rgb(134, 133, 133), 0 5px 0 silver;
+        }
+
+        .box1 {
+            background-color: rgb(58, 58, 58);
+        }
+
+
+        .box2 {
+            background-color: rgb(95, 94, 94);
+        }
+
+        .box {
+            font-size: 20px;
+            width: 100%;
+            padding: 15px;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .box.right {
+            float: right;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+        }
+
+        .educationButton {
+            transition-duration: 0.4s;
+        }
+
+        .educationButton:hover {
+            background-color: white;
+            color: black;
+        }
+
+        /* For the Image of Myself */
+        .sideImg:hover {
+            box-shadow: 0 3px 3px 0 rgb(168, 167, 167), 0 3px 3px 0 rgb(189, 188, 188);
+            cursor: pointer;
+        }
+
+        a{
+            color: rgb(207, 204, 204);
+        }
+
+        a:hover{
+            color: rgb(65, 64, 64);
+        }
+
+        
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: gray;
+            font-size: larger;
+            font-family: monospace;
+            transition-duration: 0.2s;
+            color: white;
+
+            animation: background-fade 9s infinite;
+        }
+
+        /* For the hover effect on the footer text. */
+        .footer:hover {
+            text-shadow: 0 8px 0 rgb(61, 60, 60), 0 5px 0 rgb(48, 47, 47);
+        }
+
+
+        /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+         @media screen and (max-width: 700px) {
+            .row {
+                flex-direction: column;
+            }
+        }
+
+        /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 400px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+            } 
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Hi! I am Utkarsh</h1>
+        <p style="font-size: large;">This is a brief introduction of me.</p>
+    </div>
+
+    <div class="navbar">
+        <a href="#Education">Education</a>
+        <a href="#Skills">Skills</a>
+        <a href="#My Projects">My_Projects</a>
+        <a href="#Contact Me" class="right">Contact_Me</a>
+    </div>
+
+    <div class="row">
+        <div class="side">
+
+            <h2><u>About Me</u></h2>
+            <h5>Photo of me:</h5>
+            <div class="sideImg"><img src="https://i.pinimg.com/564x/aa/f8/1c/aaf81cbb8d587b39c06de7604e4a053e.jpg" alt="" style="width: 100%;"></div>
+
+            <p>Hi,This is me. I am an aspiring Front-end Developer and a student currently pursuing my Masters from
+                Lovely Professional University </p>
+
+            <h3><u>My Hobbies</u></h3>
+            <p>Some of My Recent Art-Work</p>
+            <p><a href="https://i.pinimg.com/originals/2d/52/5b/2d525bae8e2447c08f06cc6496d84211.jpg" target="_blank">Visit My Art-Work_01 Here</a></p>
+            <p><a href="https://i.pinimg.com/originals/19/d8/db/19d8dbb2b488b14250905b9ca588a232.jpg" target="_blank">Visit My Art-Work_02 Here</a></p>
+            <p><a href="https://i.pinimg.com/originals/19/bb/dc/19bbdc1378bff8acdb533e74dcd9c719.jpg" target="_blank">Visit My Art-Work_03 Here</a></p>
+        </div>
+
+
+        <div class="main">
+            <h2 style="font-family: 'Times New Roman', Times, serif;" id="Education"><u>EDUCATIONAL BACKGROUND</u></h2>
+
+            <div class="box box1 educationButton">
+                <b>LPU (Post Graduation)</b>
+                <span style="float: right;">8.71 c.g.p.a</span>
+            </div>
+
+            <div class="box box2 educationButton">
+                <b>Bilaspur University(Graduation)</b>
+                <span style="float: right;">85.94%</span>
+            </div>
+
+            <div class="box box1 educationButton">
+                <b>XII</b>
+                <span style="float: right;">83%</span>
+
+            </div>
+
+            <div class="box box2 educationButton">
+                <b>X</b>
+                <span style="float: right;">9.0 c.g.p.a</span>
+            </div>
+            <p>Learning Ability</p>
+            <ul>
+                <li>Display an ability to learn rapidly and adapt quickly to changing situations.</li>
+                <li>Quickly grasps new routines and explanations.</li>
+                <li>Responds promptly to changes and opportunities.</li>
+                <li>Responds quickly to new instructions, situations, methods and procedures.</li>
+            </ul>
+
+            <br>
+
+            <h2 id="Skills"><u>SKILLS</u></h2>
+            <h5>Some of my skills are:</h5>
+            <div class="row">
+                <div class="button">C </div>
+                <div class="button">C++</div>
+                <div class="button">JAVA</div>
+                <div class="button">HTML-5</div>
+                <div class="button">CSS-3</div>
+                <div class="button">GIT</div>
+            </div>
+            <ul>
+                <li>I try to incorporate newest computer technology and keep abreast of latest software application and possess a strong knowlege of computer fundamentals.</li> 
+                <li>I am a person who recognizes the importance of appearance and dress appropriatly for the position.</li> 
+                <li>I give proper attention to personal hygiene and projects poise and authority.</li>
+            </ul>
+            <p>Communication Skills...</p>
+            <ul>
+                <li>Effective organizations of ideas for logical presentation and acceptance.</li>
+                <li>Excel in communicationg with individuals and small groups.</li>
+                <li>Excel in verbal and non-verbal Communication.</li>
+                <li>Possess a strong vocabulary.</li>
+
+            </ul>
+
+            <br>
+
+            <h2 id="My Projects"><u>My Projects</u></h2>
+            <p>These are Some of my latest Projects. Checkout the following links.</p><br>
+            <a href="#" style="padding-right: 10px;">Project-01</a>
+            <a href="#" style="padding-right: 10px;">Project-02</a>
+            <a href="#" style="padding-right: 10px;">Project-03</a>
+            <a href="#" style="padding-right: 10px;">Project-04</a>
+            <a href="#" style="padding-right: 10px;">Project-05</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2 id="Contact Me">Connect With Me through...</h2><br>
+        <a href="https://open.spotify.com/playlist/7dCpqWV4pVEkBx2K7kGNM5?si=64c7f125c01e4181" target="_blank"><i class="fa-brands fa-spotify" style="font-size: 50px;"></i></a>
+        <a href="https://github.com/UtkarshSinghChouhan" target="_blank"><i class="fa-brands fa-github" style="font-size: 50px;"></i></a>
+        <a href="https://www.linkedin.com/in/utkarsh-singh-chouhan-424551217" target="_blank"><i class="fa-brands fa-linkedin" style="font-size: 50px;"></i></a>
+        <i class="fa-brands fa-facebook-square" style="font-size: 50px;"></i>
+        <i class="fa-brands fa-instagram" style="font-size: 50px;"></i>
+        <i class="fa-brands fa-pinterest-square" style="font-size: 50px;"></i>
+        <i class="fa-brands fa-reddit-square" style="font-size: 50px;"></i>
+    </div>
+
+</body>
+
+</html>
