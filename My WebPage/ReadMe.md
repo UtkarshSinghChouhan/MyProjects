@@ -17,7 +17,3 @@
     <li>CSS [style/presentation].</li>
 </ul>
 <h2> Technologies used : </h2>
-<ul>
-    <li>HTML.</li>
-    <li>CSS [style/presentation].</li>
-</ul>
