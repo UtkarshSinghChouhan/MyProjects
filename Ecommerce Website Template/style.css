@@ -1,11 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+:root{
+    --main-bg-color:#2874f0
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
+header{
+    background-color: var(--main-bg-color);
+}
+
+nav{
+    display: flex;
+}
+
+nav ul{
+    height: 58px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: white;
+    
+    transition: height 0.5s ;
+}
+
+nav ul:hover{
+    
+    height: 72px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 86px;
+    padding: 0px 40px;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 0vw 28px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+
+    transition: font-size 0.5s ;
+}
+
+nav ul li a:hover{
+    font-style: bold;
+    font-size: 30px;
+}
+
+.container{
+    min-height: calc(100vh - 58px - 62px);
+}
+
 footer{
-    height: 8vh;
-    background-color: black;
+    height: 62px;
+    background-color: var(--main-bg-color);
     color: white;
 
     
