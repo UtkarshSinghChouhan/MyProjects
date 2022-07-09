@@ -28,7 +28,6 @@ nav ul {
     justify-content: flex-start;
     align-items: center;
     color: white;
-
 }
 
 
@@ -68,7 +67,7 @@ nav .searchBar {
 
 
 nav .searchBar input {
-    width: 300px;
+    width: 21vw;
     height: 23px;
     border-radius: 5px;
 
@@ -99,7 +98,14 @@ main .container .slider {
     justify-content: center;
     margin: 10px auto;
     max-width: 90vw;
+    height: 444px;
     background-color: #e5e5e5;
+    overflow: hidden;
+
+}
+
+@keyframes image3 {
+    
 }
 
 main .container .card {
@@ -110,6 +116,12 @@ main .container .card {
 
 main .container .card h2{
     font-family: 'Ubuntu', sans-serif;
+    padding: 8px;
+}
+
+.card .cards{
+    display: flex;
+    justify-content: space-around;
 }
 
 .card .card-item{
@@ -117,6 +129,13 @@ main .container .card h2{
     flex-direction: column;
     justify-content: center;
     margin: 0 33px;
+}
+
+.cards .card-item img:hover{
+    transition: width 0.3s;
+}
+.cards .card-item img:hover{
+    width: 180px;
 }
 
 footer {
