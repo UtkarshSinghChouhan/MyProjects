@@ -1,72 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
-:root{
-    --main-bg-color:#2874f0
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+:root {
+    --main-bg-color: #2874f0
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-header{
+header {
     background-color: var(--main-bg-color);
+    font-family: 'lato', sans-serif;
 }
 
-nav{
+nav {
     display: flex;
 }
 
-nav ul{
+nav ul {
     height: 58px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     color: white;
-    
-    transition: height 0.5s ;
+
 }
 
-nav ul:hover{
-    
-    height: 72px;
-}
 
-.logo{
+.logo {
     display: flex;
     align-items: center;
 }
 
-.logo img{
+.logo img {
     width: 86px;
     padding: 0px 40px;
 }
 
-nav ul li{
+nav ul li {
     list-style: none;
     padding: 0vw 28px;
 }
 
-nav ul li a{
+nav ul li a {
     color: white;
     text-decoration: none;
 
-    transition: font-size 0.5s ;
+    transition: font-size 0.5s;
 }
 
-nav ul li a:hover{
-    font-style: bold;
+nav ul li a:hover {
+    font-weight: bold;
     font-size: 30px;
+    cursor: pointer;
 }
 
-.container{
+nav .searchBar {
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+
+nav .searchBar input {
+    width: 300px;
+    height: 23px;
+    border-radius: 5px;
+
+    margin: 0px -10px 0 86px;
+
+    transition: width 0.5s, height 0.5s;
+
+}
+
+nav .searchBar input:hover {
+    width: 350px;
+    height: 33px;
+
+}
+
+nav .searchBar img {
+    width: 23px;
+    position: relative;
+    right: 19px;
+}
+
+.container {
     min-height: calc(100vh - 58px - 62px);
 }
 
-footer{
+main .container .slider {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    max-width: 90vw;
+    background-color: #e5e5e5;
+}
+
+main .container .card {
+    background-color: beige;
+    max-width: 90vw;
+    margin: auto;
+}
+
+main .container .card h2{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.card .card-item{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 33px;
+}
+
+footer {
     height: 62px;
     background-color: var(--main-bg-color);
     color: white;
-
-    
 }
