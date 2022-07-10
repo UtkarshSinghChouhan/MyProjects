@@ -2,4 +2,30 @@
     body{
         background-color: red;
     }
+
+    nav{
+        flex-direction: column;
+    }
+
+    .logo{
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    nav ul{
+        justify-content: center;
+        height: 21px;
+    }
+
+    nav .searchBar{
+        justify-content: center;
+    }
+
+    nav .searchBar input{
+        margin: 0 16px;
+    }
+
+    nav .searchBar img{
+        right: 44px;
+    }
 }
