@@ -363,6 +363,108 @@ main{
     }
 
     100%{
-        transform: translateY(-1.5rem) rotate(15deg);
+        transform: translateY(0) rotate(15deg);
     }
 }
+
+
+
+/* =====================  BREAKPOINTS =============================  */
+
+/* For Small Devices (Galaxy Fold)*/   
+@media screen and (max-width:330px)  {
+    .container{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .home__images{
+        width: 245px;
+        height: 320px;
+    }
+
+    .home__liquid{
+        width: 250px;
+        left: 0;
+    }
+
+    .home__juice{
+        width: 100px;
+    }
+
+    .home__apple1,
+    .home__apple2{
+        width: 70px;
+    }
+}
+
+
+
+/* For Medium Devices */
+@media screen and (min-width:767px){
+   .nav{
+        height: calc(var(--header-height) + 1.5rem);
+   } 
+
+   .nav__toggle,
+   .nav__close,
+   .nav__img{
+        display: none;
+   }
+
+   .nav__list{
+        flex-direction: row;
+        column-gap: 3rem;
+   }
+
+
+   .home__container{
+        grid-template-columns: max-content max-content;
+        /* We can also specifies the grid-template-column in shorthand as */
+        /* grid-template-columns: repeat(2, max-content); */
+
+        justify-content: center;
+        align-items: center;
+
+        column-gap: 4rem;
+        padding-top: 4rem;
+   }
+}
+
+
+
+/* For Large Devices */
+@media screen and (min-width:1024px) {
+    .home__images{
+        width: 530px;
+        height: 590px;
+    }
+
+    .home__liquid{
+        width: 530px;
+    }
+
+    .home__juice{
+        width: 220px;
+        left: 0;
+        top: 1.5rem;
+    }
+
+    .home__apple1{
+        width: 180px;
+        left: -1rem;
+        top: 10rem;
+    }
+
+    .home__apple2{
+        width: 185px;
+        right: 0.5rem;
+        bottom: 5.5rem;
+    }
+
+    .home__leaf:nth-child(1),
+    .home__leaf:nth-child(6){
+        width: 70px;
+    }
+}
+
