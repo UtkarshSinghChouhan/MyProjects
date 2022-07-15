@@ -1,0 +1,26 @@
+body{
+    background: red;
+}
+
+/*=================== NAVIGATION BAR ===================*/
+#navbar{
+    flex-direction: column;
+}
+
+/*=================== HOME SECTION ===================*/
+#home{
+
+}
+
+/*=================== SERVICES SECTION ===================*/
+#services{
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+#services .box{
+    margin-bottom: 25px;
+}
+
+
+/*=================== CLIENTS SECTION ===================*/
+/*=================== CONTACT SECTION ===================*/
