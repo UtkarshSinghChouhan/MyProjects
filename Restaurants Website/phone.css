@@ -1,6 +1,3 @@
-body{
-    background: red;
-}
 
 /*=================== NAVIGATION BAR ===================*/
 #navbar{
@@ -46,13 +43,18 @@ body{
 
 #services .box img{
     width: 155px;
-    height: 127px;
+    height: auto;
 }
 
 
 /*=================== CLIENTS SECTION ===================*/
 #clients{
     flex-wrap: wrap;
+}
+
+#clients img{
+    width: 85px;
+    height: auto;
 }
 
 /*=================== CONTACT SECTION ===================*/
