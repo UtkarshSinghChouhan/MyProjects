@@ -27,6 +27,7 @@
     align-items: center;
     position: sticky;         /*cause we have made the position-absolute of the ::before pseudo element*/
     top: 0;
+    z-index: 1;
 }
 
 #navbar::before{
@@ -94,7 +95,7 @@
     display: flex;
     flex-direction: column;
     padding: 3px 200px;
-    height: 396px;
+    height: 409px;
     justify-self: center;
     align-items: center;
 }
@@ -160,7 +161,6 @@
 
 /*============== Clients Section ==============*/
 #client-section{
-    height: 344px;
     position: relative;     /*cause we have made the position-absolute of the ::before pseudo element*/
 }
 

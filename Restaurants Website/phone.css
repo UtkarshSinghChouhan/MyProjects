@@ -7,9 +7,28 @@ body{
     flex-direction: column;
 }
 
+#navbar ul li a{
+    font-size: 1rem;
+    padding: 0px 7px 4px;
+}
+
 /*=================== HOME SECTION ===================*/
 #home{
+    height: 370px;
+    padding: 3px 28px;
+}
 
+#home::before{
+    height: 480px;
+}
+
+#home p{
+    font-size: 13px;
+}
+
+#home button{
+    font-size: 13px;
+    margin: 17px 17px 17px;
 }
 
 /*=================== SERVICES SECTION ===================*/
@@ -19,8 +38,29 @@ body{
 }
 #services .box{
     margin-bottom: 25px;
+    padding: 8px;
+}
+#services .box p{
+    font-size: 12px;
+}
+
+#services .box img{
+    width: 155px;
+    height: 127px;
 }
 
 
 /*=================== CLIENTS SECTION ===================*/
+#clients{
+    flex-wrap: wrap;
+}
+
 /*=================== CONTACT SECTION ===================*/
+/*=================== UTILITY CLASSES ===================*/
+.h-primary{
+    font-size: 26px;
+}
+
+.btn{
+    font-style: 13px;
+}
