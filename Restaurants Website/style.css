@@ -1,18 +1,26 @@
-/* Google Fonts */
+/*============== Google Fonts ==============*/
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap');
 
-/* CSS Reset */
+/*============== CSS Reset ==============*/
 *{
     margin: 0;
     padding: 0;
 }
 
-/* CSS Variables */
+/*=========== CSS Variables ==============*/
 :root{
     --navbar-height: 59px;
 }
 
-/* Navigation bar */
+
+
+
+
+
+
+
+
+/*============== Navigation bar ==============*/
 
 #navbar{
     display: flex;
@@ -34,7 +42,7 @@
 
 
 
-/* Navigation bar : Logo and image */
+/*============== Navigation bar : Logo and image ==============*/
 #navbar #logo{
     margin: 5px 6px;
 }
@@ -46,7 +54,7 @@
 
 
 
-/* Navigation bar : List Styling*/
+/*============== Navigation bar : List Styling ==============*/
 #navbar ul{
     display: flex;
     font-family: 'Baloo Bhai 2', cursive;
@@ -72,7 +80,16 @@
     cursor: pointer; 
 }
 
-/* Home Section */
+
+
+
+
+
+
+
+
+
+/*============== Home Section ==============*/
 #home{
     display: flex;
     flex-direction: column;
@@ -107,7 +124,11 @@
     font-family: 'Bree Serif', serif;
 }
 
-/* Servies Section */
+
+
+
+
+/*============== Servies Section ==============*/
 #services{
     margin: 34px;
     display: flex;
@@ -133,7 +154,11 @@
 
 }
 
-/* Clients Section */
+
+
+
+
+/*============== Clients Section ==============*/
 #client-section{
     height: 344px;
     position: relative;     /*cause we have made the position-absolute of the ::before pseudo element*/
@@ -165,16 +190,78 @@
 }
 
 
-/* Utility classes */
+
+
+
+
+/*============== Contact Section ==============*/
+#contact{
+    position: relative;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url(Image__Assests/contact.jpg) no-repeat center center/cover;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    font-family: 'Bree Serif', serif;
+    border-radius: 9px;
+    box-shadow: 2px 2px 5px black;
+}
+
+
+
+
+
+
+/*============== Footer  ==============*/
+footer{
+    background-color: black;
+    color: white;
+    padding: 10px 24px;
+}
+
+
+
+
+
+
+
+/*============== Utility classes ==============*/
 .h-primary{
     font-family: 'Bree Serif', serif;
-    font-size: 3.8rem;
+    font-size: 2.8rem;
     padding: 12px;
 }
 
 .h-secondary{
     font-family: 'Bree Serif', serif;
-    font-size: 2.3rem;
+    font-size: 1.9em;
     padding: 12px;
 }
 
