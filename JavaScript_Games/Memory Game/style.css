@@ -1,0 +1,21 @@
+#grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 2px;
+    column-gap: 2px;
+    cursor: pointer;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body h3{
+    padding: 0 40%;
+}
