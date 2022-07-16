@@ -84,13 +84,15 @@ function createBoard(){
     for(let i = 0; i < cardArray.length; i++) {
        const card =  document.createElement('img');
        card.setAttribute('src', 'Images/blank.png')
-       card.setAttribute('data-id', i)
+       card.setAttribute('data-id', i)      //Note that the data-id matches woth the 'cardArray'- array indices
 
        gridDisplay.appendChild(card);
 
        card.addEventListener('click', flipCard);
     }
 }
+
+// Do note that, we need to call the function to actually create all those elements.
 createBoard();
 
 
@@ -106,6 +108,8 @@ function checkMatch(){
     if(cardChoosenId[0] == cardChoosenId[1])
     {
         alert('You have clicked the same card twice!!');
+        cards[cardChoosenId[0]].setAttribute('src', 'Images/blank.png')
+        cards[cardChoosenId[1]].setAttribute('src', 'Images/blank.png')
     }
 
 
@@ -121,9 +125,9 @@ function checkMatch(){
        cards[cardChoosenId[0]].removeEventListener('click', flipCard)
        cards[cardChoosenId[1]].removeEventListener('click', flipCard)
 
-       //Here we are pushing the name of the matched cards in the 'cardWon' array
+       //Here we are pushing the 'name' of the matched cards in the 'cardWon' array (which will help to calculate the score)
        cardWon.push(cardChoosenName[0]);
-       console.log(cardWon);
+       //console.log(cardWon);
 
        //Updating the score
        resultDisplay.innerHTML = cardWon.length;
@@ -132,7 +136,7 @@ function checkMatch(){
     
     //if the cards chosen are different.
     else{
-        //if the cards chosen are different, we need to again flip the cards.
+        //if the cards chosen are different, we need to again flip-back the cards.
         cards[cardChoosenId[0]].setAttribute('src', 'Images/blank.png')
         cards[cardChoosenId[1]].setAttribute('src', 'Images/blank.png')
         alert('Sorry Try again 😢')
@@ -154,13 +158,14 @@ function checkMatch(){
 function flipCard(){
     // console.log(cardArray);
     const cardId = this.getAttribute('data-id');        //this-keyword returns the element on which we clicked
+    // console.log('clicked!', cardId);
     // console.log(cardArray[cardId].name);
     cardChoosenName.push(cardArray[cardId].name);
     cardChoosenId.push(cardId);
     // console.log(cardChoosenId);
-    // console.log(cardChoosen);
-    // console.log('clicked!', cardId);
+    // console.log(cardChoosenName);
     this.setAttribute('src', cardArray[cardId].img)
+
     if(cardChoosenName.length === 2){
         setTimeout(checkMatch, 500)
     }
