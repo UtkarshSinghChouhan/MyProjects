@@ -1,0 +1,29 @@
+body{
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid{
+   
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2px;
+    column-gap: 2px;
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.mole{
+    background-color: blue;
+    background: url(https://monophy.com/media/3o7TKC13Nt8Wv1Yl3y/monophy.gif) no-repeat  center/cover;
+}
