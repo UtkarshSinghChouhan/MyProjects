@@ -23,7 +23,7 @@ let squares = document.querySelectorAll('.square'),       //An array containing 
 
 
 let result = 0,
-    currentTime = 10,
+    currentTime = 60,
     hitPosition, 
     randomPosition;
 
@@ -81,7 +81,7 @@ function countDown(){
 
     // when the timer hits-0
     if(currentTime == 0){
-        
+
         // when the timer hits-0, stop the timer
         clearInterval(stopTimer);
 
