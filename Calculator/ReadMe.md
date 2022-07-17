@@ -1,4 +1,5 @@
 <h1> A Simple Calculator </h1>
+<a href="https://utkarshsinghchouhan.github.io/MyProjects/Calculator/index.html" target='_blank'>Click Here to visit the website</a>
 
 <p>A Simple Calculator Using HTML, CSS & JavaScript.</p>
 
