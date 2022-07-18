@@ -1,0 +1,31 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    width: 560px;
+    height: 400px;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.block{
+    width: 100px;
+    height: 20px;
+    background-color: blue;
+    border-radius: 2px;
+
+    position: absolute;
+}
+
+.user{
+    width: 100px;
+    height: 20px;
+    background-color: purple;
+    border-radius: 2px;
+
+    position: absolute;
+}
