@@ -1,6 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
+    overflow: hidden; 
+    width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    row-gap: 5px;
     justify-content: center;
     align-items: center;
 }
@@ -9,7 +17,7 @@ body{
     width: 560px;
     height: 400px;
     border: 2px solid black;
-    position: absolute;
+    position: relative;
 }
 
 .block{
@@ -28,4 +36,12 @@ body{
     border-radius: 2px;
 
     position: absolute;
+}
+
+.ball{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
 }
