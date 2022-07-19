@@ -1,10 +1,11 @@
 let grid = document.querySelector('.grid');
 let score = document.querySelector('.score');
-// let gridPosition = grid.getBoundingClientRect();
-// console.log(grid);
+
+
 let gridWidth = 560;
 let gridHeight = 400;
 
+let result = 0;
 
 const ballDiameter = 20; //since the width and height is 20px
 
@@ -154,23 +155,46 @@ function moveBall(){
     checkForCollisions();
 }
 
-timerId = setInterval(moveBall,30);
+
+    timerId = setInterval(moveBall,15);
+
+
 
 
 //check for collision
 function checkForCollisions(){
-
+    
     //check for blocks collisions
     for(let i = 0; i < blocks.length; i++){
         if(
             (ballCurrentPosition[0] > blocks[i].bottomLeft[0] && ballCurrentPosition[0] < blocks[i].bottomRight[0]) &&
             ((ballCurrentPosition[1] + ballDiameter) > blocks[i].bottomLeft[1] && ballCurrentPosition[1] < blocks[i].topLeft[1])                        
         ){
-            const allBlocks = Array.from(document.querySelectorAll('.block'));
+            const allBlocks = document.querySelectorAll('.block');
             console.log(allBlocks)
             allBlocks[i].classList.remove('block');             
-            allBlocks.splice(i, 1)
+            blocks.splice(i, 1)
+            changeDirection();
+            result++;
+            score.innerHTML = result;
+
+            // checking for the win
+            if(blocks.length === 0){
+                score.innerHTML = '🎉You Win!🎉'
+
+                // Stop the ball from further moving, after the win
+                clearInterval(timerId);
+
+                // Stop the user block from motion
+                document.removeEventListener('keydown',moveUser);
+            }
         }
+    }
+
+    // check if the ball collides with the user block
+    if((ballCurrentPosition[0] > userCurrentPosition[0] && ballCurrentPosition[0] < userCurrentPosition[0] + blockWidth) &&
+        (ballCurrentPosition[1] > userCurrentPosition[1] && ballCurrentPosition[1] < userCurrentPosition[1] + blockHeight)){
+        changeDirection();
     }
 
     //check for wall collisions
@@ -184,8 +208,11 @@ function checkForCollisions(){
 
     // check for gameOver
     if(ballCurrentPosition[1] <= 0){
+        // clearInterval() will prohibit the setInterval() from calling the moveBall() function again.
         clearInterval(timerId);
-        score.innerHTML = 'You Lose!';
+
+        // if the ball hits the battom we will lose
+        score.innerHTML = 'Game Over!😢';
 
         // Now we are removing the eventListener form the user, so that after game is over we won't be able to move the user.
         document.removeEventListener('keydown', moveUser)
