@@ -97,7 +97,7 @@ function positionUser(){
 
 
 
-
+// function to move the user
 function moveUser(e){
     // console.log(e.key);
     switch(e.key){
@@ -164,17 +164,18 @@ function checkForCollisions(){
     for(let i = 0; i < blocks.length; i++){
         if(
             (ballCurrentPosition[0] > blocks[i].bottomLeft[0] && ballCurrentPosition[0] < blocks[i].bottomRight[0]) &&
-            (ballCurrentPosition[1] + ballDiameter > blocks[i].bottomLeft[1] && ballCurrentPosition[1] < blocks[i].bottomRight[1])                        
+            ((ballCurrentPosition[1] + ballDiameter) > blocks[i].bottomLeft[1] && ballCurrentPosition[1] < blocks[i].topLeft[1])                        
         ){
             const allBlocks = Array.from(document.querySelectorAll('.block'));
-            allBlocks[i].classList.remove('block');
+            console.log(allBlocks)
+            allBlocks[i].classList.remove('block');             
             allBlocks.splice(i, 1)
         }
     }
 
     //check for wall collisions
     if( 
-        (ballCurrentPosition[0] >= (gridWidth - ballDiameter)) ||
+        (ballCurrentPosition[0] >= (gridWidth - ballDiameter))  ||
         (ballCurrentPosition[1] >= (gridHeight - ballDiameter)) ||
         (ballCurrentPosition[0] <= 0)
        ){
