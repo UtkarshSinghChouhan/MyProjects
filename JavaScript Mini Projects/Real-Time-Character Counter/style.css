@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: salmon;
+    font-family: 'Montserrat', sanserif;
+    
+}
+
+.container{
+    background-color: rgb(251, 172, 163);
+    width: 430px;
+    padding: 18px 22px 18px 22px;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
+}
+
+.textarea{
+    resize: none;
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Montserrat', sanserif;
+    padding: 10px;
+    box-sizing: border-box;
+    border: solid 2px darkgray ;
+}
+
+.counter-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+}
+
+.counter-container p{
+    color: rgb(87, 86, 86);
+}
+
+
+#total-counter{
+    color: red;
+}
+
+#remaining-counter{
+    color: blue;
+}
