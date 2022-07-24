@@ -47,3 +47,95 @@ p{
 body{
     width: 100%;
 }
+
+/* ========== HEADER START ============ */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #E3E6F3;
+
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.09);
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: color 0.2s ease-in;
+}
+
+
+#navbar li a:hover,
+#navbar li a.active{
+    color: #088178;
+
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    background-color: #088178;
+    width: 30%;   
+    height: 2px;
+
+    position: absolute;         /*We have added positon:relative to the 'li' elements*/
+    left: 20px;
+    bottom: -4px;
+}
+/* ========== HOME PAGE ============ */
+
+#hero{
+    background-image: url('img/hero4.png');
+    background-position: top 25% right 0;
+    background-size: cover;
+    height: 90vh;
+    padding: 0 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: #088178;
+}
+
+#hero button{
+    background-image: url(img/button.png);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    padding: 14px 80px 14px 65px;
+
+    color: #088178;
+    font-size: 15px;
+    font-weight: 700;
+
+    border: none;
+    cursor: pointer;
+}
+/* ========== SHOP PAGE ============ */
