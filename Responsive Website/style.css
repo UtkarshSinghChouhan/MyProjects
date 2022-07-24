@@ -1,61 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ============= GLOBAL STYLINGS ================= */
 *{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
 }
-
-#header{
-    height: 100vh;
-    background: url(images/background.png) center center/cover;
-}
-
-.container{
-    margin-right: 100px;
-    margin-left: 100px;
-}
-
-.logo{
-    margin-top: 30px;
-    width: 100px;
-}
-
-.header-text{
-    max-width: 350px;
-}
-
+    
 h1{
-    font-size: 34px;
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
 }
 
-.square{
-    height: 12px;
-    width: 12px;
-    display: inline-block;
-    background: #f67c92;
-    margin: 15px 0;
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
 }
 
-.common-btn{
-    padding: 18px 40px;
-    background: transparent;
-    outline: none;
-    border: 2px solid #f67c92;
-    font-weight: bold;
-    cursor: pointer;
+h4{
+    font-size: 20px;
+    color: #222;
 }
 
-.header-text button{
-    margin-top: 20px;
-    margin-bottom: 60px;
-
+h6{
+    font-size: 12px;
+    font-weight: 700px;
 }
 
 p{
-    font-size: 15px;
-    color: #777;
-    line-height: 18px;
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
 }
 
-.line1{
-    
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
 }
