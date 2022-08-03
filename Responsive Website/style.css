@@ -588,6 +588,86 @@ footer .install img{
     color: #fff;
 }
 
+#pagination{
+    text-align: center;
+}
+
+#pagination a{
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+#pagination a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Single Product Page */
+#productDetails{
+    display: flex;
+    motion-path: 20px;
+}
+
+#productDetails .single-product-img{
+    width: 40%;
+    margin-right: 50px;
+}
+
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+
+#productDetails .single-product-details{
+    width: 50%;
+    padding-top: 30px;
+}
+
+#productDetails .single-product-details h4{
+    padding: 40px 0 20px 0;
+}
+
+#productDetails .single-product-details h2{
+    font-size: 26px;
+}
+
+#productDetails .single-product-details select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#productDetails .single-product-details input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#productDetails .single-product-details input:focus{
+    outline: none;
+}
+
+#productDetails .single-product-details button{
+    background-color: #088178;
+    color: #fff;
+}
+
+#productDetails .single-product-details span{
+    line-height: 25px;
+}
 /* =================  MEDIA QUERIES =================== */
 
 @media  screen and (max-width:799px) {
@@ -687,4 +767,23 @@ footer .install img{
         line-height: 25px;
     }
 }
-/* ========== SHOP PAGE ============ */
+
+
+@media screen and (max-width:477px){
+    /* ====== For SingleProductPage =============== */
+    #productDetails{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #productDetails .single-product-img{
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    #productDetails .single-product-details{
+        width: 100%;
+    }
+}
